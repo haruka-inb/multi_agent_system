@@ -1,0 +1,93 @@
+review_cv:
+  description: >
+    Analyze the CV to assess overall content quality, 
+    keyword alignment with the target industry, and 
+    effectiveness of each section. 
+    The task includes identifying strong writing elements 
+    (action verbs, quantified achievements, concise bullet points),
+    detecting vague or generic phrasing 
+    with suggestions for improvement, 
+    matching domain-relevant keywords and skills, 
+    and scoring each section with targeted feedback.
+  expected_output: >
+    A structured list includes:
+    - Content Quality Insights:
+      - List of identified action verbs.
+      - Quantified achievements with locations.
+      - Concise bullet points detected.
+      - Vague descriptions with rewrite suggestions.
+    - Keyword and Industry Match:
+      - Detected industry/domain (based on user input or inferred from CV).
+      - Found keywords in the CV.
+      - Recommended keywords to add.
+      - Missing or underrepresented hard/soft skills.
+    - Section Ratings and Feedback:
+      - List of all major CV sections (e.g., Work Experience, Skills, Education).
+      - Score for each section (e.g., 4.0/5).
+      - Specific improvement tips per section.
+
+review_repo:
+  description: >
+    Evaluate the user's code repositories and assess how effectively they support the CV, 
+    using the gained insight from the previous task by CV reveiwer.
+    This includes checking 
+    the completeness and quality of each repository 
+    (documentation, structure, clarity, adherence to language-specific best practices), 
+    aligning repository technologies with the skills listed in the CV, 
+    identifying mismatches or missing skills, and providing integration guidance.
+    The task also rates how well the projects enhance the CV and offers suggested phrasing for inclusion.
+  expected_output: >
+    A structured list includes:
+    - Repository Quality Assessment:
+      - Repository name.
+      - Completeness status (README, documentation, recent activity).
+      - Code clarity and modularity.
+      - Adherence to language-specific standards.
+      - Overall code quality rating (e.g., 8/10).
+    - CV and Repository Alignment:
+      - Skills/tools found in repositories.
+      - Skills/tools listed in the CV.
+      - Matching skills.
+      - Missing or underrepresented technologies in the CV.
+      - Recommended additions to the CV based on repo content.
+    - Project Representation Suggestions:
+      - Score for how well each project supports the CV (e.g., 7.5/10).
+      - Suggested bullet points or phrasing for incorporating each project into the CV.
+      - Recommendations for highlighting impact, scale, or relevant technologies.
+
+research_job_market:
+  description: >
+    Using the previous task by CV reviewer, 
+    resarch the today's demanding skills and roles in user's industry domain.
+  expected_output: >
+    Summarize the demanding role and skills.
+
+match_career:
+  description: >
+    Using the analysis results by CV reviewer and Repositoty reviewer 
+    and job market demand insight from the previous task, 
+    analyze the user's CV and code repositories in the context of current job market demands. 
+    Identify outdated or low-demand skills, suggest emerging technologies to learn, 
+    and recommend job roles that align with the candidate's profile. 
+    Provide targeted advice on tailoring the CV for specific roles. 
+    Finally, generate a concise, structured report summarizing CV quality, 
+    alignment with the job market, and actionable next steps for improvement.
+  expected_output: >
+    Format the output as a hierarchical (nested) list following format of Markdown, organizing each main section 
+    (i.e., CV Quality Summary Report, Market Alignment Analysis, CV Tailoring Recommendations, and Overall Assessment) 
+    as a top-level list item, and their bullet points as sub-items.
+    CV Quality Summary Report should includes:
+      - Overall CV score (e.g., 7.2/10).
+      - Section-wise scores and issues (e.g., Work Experience: 3.5/5, missing metrics).
+      - Repository-CV Alignment Score and issues (e.g., 7.5/10).
+      - Summary paragraph highlighting key strengths, and weaknesses.
+    Market Alignment Analysis should includes:
+      - Suggested job roles aligned with the user's skills and experience.
+      - Comparison of listed skills vs. current job market trends.
+      - Outdated skills detected.
+      - Emerging or in-demand technologies to consider learning.
+    CV Tailoring Recommendations should includes:
+      - Guidance on customizing the CV for recommended role.
+      - Keywords or skills to emphasize or add.
+      - Suggestions for restructuring or emphasizing certain sections.
+    Overall Assessment should includes summary of the above three sections.
