@@ -18,8 +18,8 @@ app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 
 
-UPLOAD_DIR = Path.cwd() / "uploads"
-OUTPUT_DIR = Path.cwd() / "output"
+UPLOAD_DIR = Path("/tmp/uploads")
+OUTPUT_DIR = Path("/tmp/output")
 MARKDOWN_FILE = OUTPUT_DIR / "result.md"
 
 UPLOAD_DIR.mkdir(exist_ok=True)
