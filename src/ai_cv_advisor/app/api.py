@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 import markdown2
-from crew import CareerSupportCrew
+from src.ai_cv_advisor.crew import CareerSupportCrew
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from dotenv import load_dotenv

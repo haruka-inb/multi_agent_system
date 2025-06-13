@@ -1,7 +1,7 @@
 from crewai import Agent, Crew, Process, Task
 # from crewai.project import CrewBase, agent, crew, task
 import yaml
-from tools.my_custom_tool import PDFReaderTool
+from src.ai_cv_advisor.tools.my_custom_tool import PDFReaderTool
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 
 

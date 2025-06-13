@@ -31,7 +31,7 @@ export OPENAI_API_KEY=<your-openai-api-key>
 export SERPER_API_KEY=<your-serper-api-key>
 ```
 
-Start application by running this from ./cv_advisor/src/ai_cv_advisor:
+Start application by running this:
 ```bash
-$ uvicorn app.api:app --reload
+$ uvicorn src.ai_cv_advisor.app.api:app --reload
 ```
