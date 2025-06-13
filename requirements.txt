@@ -24,7 +24,7 @@ chromadb==0.5.23
 click==8.2.1
 cohere==5.15.0
 coloredlogs==15.0.1
-crewai==0.121.1
+crewai==0.126.0
 crewai-tools==0.45.0
 cryptography==45.0.3
 dataclasses-json==0.6.7
@@ -153,6 +153,7 @@ pyright==1.1.401
 pysbd==0.3.4
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
+python-multipart==0.0.20
 pytube==15.0.0
 pytz==2025.2
 pyvis==0.3.2
