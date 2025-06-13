@@ -15,9 +15,9 @@ class CareerSupportCrew:
         self.search_tool = SerperDevTool(n_results=1)
         self.scrape_tool = ScrapeWebsiteTool()
         
-        with open('config/agents.yaml', 'r') as agents_file:
+        with open('src/ai_cv_advisor/config/agents.yaml', 'r') as agents_file:
             self.agents_config = yaml.safe_load(agents_file)
-        with open('config/tasks.yaml', 'r') as tasks_file:
+        with open('src/ai_cv_advisor/config/tasks.yaml', 'r') as tasks_file:
             self.tasks_config = yaml.safe_load(tasks_file)
 
         self.cv_reviewer = Agent(
@@ -65,7 +65,7 @@ class CareerSupportCrew:
         config=self.tasks_config['match_career'],
         agent=self.career_advisor,
         context=[self.review_cv, self.review_repo, self.research_job_market],
-        output_file="output/result.md"
+        output_file="'src/ai_cv_advisor/output/result.md"
         )
         
     # @crew

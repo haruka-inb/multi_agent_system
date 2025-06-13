@@ -83,15 +83,6 @@ async def view_result():
             </body>
         </html>
         """)
-        # return HTMLResponse(content=f"""
-        # <html>
-        #     <head>
-        #         <title>CV Analysis Result</title>
-        #         <link rel="stylesheet" href="/static/style.css">
-        #     </head>
-        #     <body>{html_content}</body>
-        # </html>
-        # """)
     except Exception as e:
         return JSONResponse(content={"status": "error", "message": str(e)}, status_code=500)
 
