@@ -49,7 +49,7 @@ async def upload_cv(cv_file: UploadFile = File(...)):
     try:
         # Save the uploaded file
         file_path = UPLOAD_DIR / cv_file.filename
-        cv_file.save(file_path)
+        # cv_file.save(file_path)
         
         # Analyze the file to markdown
         cv_crew = CareerSupportCrew(inputs={'pdf_path': str(file_path)})
