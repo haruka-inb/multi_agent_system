@@ -17,9 +17,8 @@ static_path = Path(__file__).parent / "static"
 app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 
-
-UPLOAD_DIR = Path("/tmp/uploads")
-OUTPUT_DIR = Path("/tmp/output")
+UPLOAD_DIR = Path("/uploads")
+OUTPUT_DIR = Path("/output")
 MARKDOWN_FILE = OUTPUT_DIR / "result.md"
 
 UPLOAD_DIR.mkdir(exist_ok=True)
@@ -50,6 +49,7 @@ async def upload_cv(cv_file: UploadFile = File(...)):
     try:
         # Save the uploaded file
         file_path = UPLOAD_DIR / cv_file.filename
+        cv_file.save(file_path)
         
         # Analyze the file to markdown
         cv_crew = CareerSupportCrew(inputs={'pdf_path': str(file_path)})
