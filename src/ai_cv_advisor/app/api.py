@@ -17,8 +17,8 @@ static_path = Path(__file__).parent / "static"
 app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 
-UPLOAD_DIR = Path("/uploads")
-OUTPUT_DIR = Path("/output")
+UPLOAD_DIR = Path("src/ai_cv_advisor/uploads")
+OUTPUT_DIR = Path("src/ai_cv_advisor/output")
 MARKDOWN_FILE = OUTPUT_DIR / "result.md"
 
 UPLOAD_DIR.mkdir(exist_ok=True)
