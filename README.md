@@ -7,7 +7,7 @@ This coach help tailoring the user's CV for your suitabale career role. The Mult
 **Input:**
 - CV in a PDF format
 
-    - You can also find sample CV (long and short version) under ./cv_advisor/src/ai_cv_advisor_data
+    - You can also find sample CV under [here](https://github.com/haruka-inb/multi_agent_system/blob/master/src/ai_cv_advisor/data/test_short_cv.pdf)
 
 **Output:**
 - A Markdown file contains the quality of the CV with scores, alignment of the CV wih current job market, and CV tailoring and job role recommendations
